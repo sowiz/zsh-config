@@ -1,3 +1,12 @@
+# Replace shell with tmux
+if [[ ! $TMUX ]]; then
+    if [[ $(tmux list-sessions | sed '/attached/d' | wc -l) = '0' ]]; then
+        exec tmux
+    else
+        exec tmux attach
+    fi
+fi
+
 # Vi mode
 bindkey -v
 
@@ -27,12 +36,3 @@ alias um='sudo umount /mnt'
 alias usb=lsusb
 alias vim=nvim
 alias weather='curl wttr.in'
-
-# Replace shell with tmux
-if [[ ! $TMUX ]]; then
-    if [[ $(tmux list-sessions | sed '/attached/d' | wc -l) = '0' ]]; then
-        exec tmux
-    else
-        exec tmux attach
-    fi
-fi
