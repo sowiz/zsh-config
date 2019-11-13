@@ -1,5 +1,5 @@
 # Alias expansion
-# NB, This script requires autocompletion to be enabled
+# - NB, Requires autocompletion to be enabled
 
 # Expand alias on enter
 expand_alias_enter() {

@@ -11,6 +11,8 @@ compinit
 # Scripts
 # - https://github.com/zdharma/fast-syntax-highlighting
 source ~/.zsh-scripts/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+# - https://github.com/sowiz/zsh-config/blob/master/.zsh-scripts/expand-alias.zsh
+source ~/.zsh-scripts/expand-alias.zsh
 
 # Alias
 alias blk='lsblk'
